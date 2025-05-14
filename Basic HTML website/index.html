@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Document</title>
+    <style>
+        nav, header, section, main {
+            border: 1px solid black;
+        }
+        body {
+            grid-template-columns: auto auto auto;
+            margin: 0;
+        }
+        nav{
+            padding-left: 10px;
+            padding-right: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: start;
+            gap: 5px;
+        }
+        header {
+            padding: 100px;
+        }
+        header h1 {
+            text-align: center;
+        }
+        header p {
+            text-align: center;
+            color: gray;
+        }
+        img {
+            display: block;
+        }
+
+        @media (min-width: 600px) {
+            main {
+                display: grid;
+                grid-template-areas: 'pro we edu''pro osw edu';
+            }
+            .projects {
+                grid-area: pro;
+            }
+            .we {
+                grid-area: we;
+            }
+            .osw  {
+                grid-area: osw;
+            }
+            .edu  {
+                grid-area: edu;
+            }
+
+            .review {
+                display: grid;
+                grid-template-areas: 'a a a';
+            }
+            .review h2 {
+                grid-area: a;
+            }
+            nav{
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            img {
+                display: inline;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+            <h3><img src="favicon.ico" alt="">My Web</h3>
+            <ul>
+                <li>Home</li>
+                <li>Projects</li>
+                <li>Articles</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    <header>
+        <h1>Front End Devoloper</h1>
+        <p>html only with proper layout, not styling</p>
+    </header>
+
+        <main>
+            <section class="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>HTML only portofolio</li>
+                <li>Calculator</li>
+                <li>Quiz App</li>
+                <li>Countdown Timer</li>
+                <li>Product Upcoming Page</li>
+            </ul>
+        </section>
+
+            <section class="we">
+                <h2>Work Experience</h2>
+                <p>Solved all the frontend projects</p>
+                <a href="#">Visit my Profile</a>
+            </section>
+            <section class="osw">
+                <h2>Open Source Work</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam facilis reiciendis ratione in. Totam laboriosam consequuntur ipsam, voluptatibus quis quae quaerat? Quae corrupti explicabo officia eveniet maxime nulla deserunt delectus.</p>
+                <a href="#">Visit my Github Profile</a>
+            </section>
+        
+        
+        <section class="edu">
+            <h2>Education</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et quasi minima, non debitis reprehenderit nobis! Mollitia assumenda suscipit minima ea laudantium, quasi aliquid ex error sunt nam neque quis aut.</p>
+            <p>Course i took</p>
+            <ul>
+                <li>OOP</li>
+                <li>DSA</li>
+            </ul>
+        </section>
+        </main>
+
+    <section class="review">
+        <h2>Review from my Teachers</h2>
+        <section class="r1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid iusto blanditiis ad necessitatibus architecto enim facere adipisci voluptatum hic doloremque ipsam, nihil iure, minima porro, eaque at recusandae in quas.</p>
+            <pre>John Doe
+                Assistent Professor
+            </pre>
+        </section>
+        <section class="r1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid iusto blanditiis ad necessitatibus architecto enim facere adipisci voluptatum hic doloremque ipsam, nihil iure, minima porro, eaque at recusandae in quas.</p>
+            <pre>John Doe
+                Assistent Professor
+            </pre>
+        </section>
+        <section class="r1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid iusto blanditiis ad necessitatibus architecto enim facere adipisci voluptatum hic doloremque ipsam, nihil iure, minima porro, eaque at recusandae in quas.</p>
+            <pre>John Doe
+                Assistent Professor
+            </pre>
+        </section>
+
+    </section>
+    <p class="end">all right reserved 2025</p>
+</body>
+</html>
