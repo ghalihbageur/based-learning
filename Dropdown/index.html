@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      button {
+        display: block;
+        background-color: rgb(239, 239, 239);
+        border: 1px solid black;
+        padding: 10px;
+        width: 100px;
+      }
+      .hide {
+        display: none;
+      }
+      .click {
+        background-color: rgb(138, 138, 138);
+      }
+    </style>
+  </head>
+  <body>
+    <p id="sarapan">Kamu belum memilih sarapan</p>
+    <button id="item0" onclick="toggleD()">Pilih item</button>
+    <div id="items" class="hide">
+      <button id="item1" class="item" onclick="item(this.id)">Daging</button>
+      <button id="item2" class="item" onclick="item(this.id)">Sayur</button>
+      <button id="item3" class="item" onclick="item(this.id)">Buah</button>
+    </div>
+
+    <script>
+
+      let element = document.getElementById("items");
+      function item(id){
+        collection = document.getElementsByClassName("item");
+        for (let i = 0; i < collection.length; i++) {
+          collection[i].classList.remove('click');
+        }
+        let val = document.getElementById(id).innerHTML;
+        document.getElementById(id).classList.add("click");
+        document.getElementById("item0").innerHTML = val;
+        element.classList.toggle("hide");
+        document.getElementById("sarapan").innerHTML = "Sarapan hari ini adalah " + val;
+      }
+
+      function toggleD() {
+        element.classList.toggle("hide")
+      }
+    </script>
+  </body>
+</html>
