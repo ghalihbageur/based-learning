@@ -4,94 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
-    <style>
-        nav, header, section, main {
-            border: 1px solid black;
-        }
-        body {
-            grid-template-columns: auto auto auto;
-            margin: 0;
-        }
-        nav{
-            padding-left: 10px;
-            padding-right: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-        nav ul {
-            list-style-type: none;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            align-items: start;
-            gap: 5px;
-        }
-        header {
-            padding: 100px;
-        }
-        header h1 {
-            text-align: center;
-        }
-        header p {
-            text-align: center;
-            color: gray;
-        }
-        img {
-            display: block;
-        }
-
-        section {
-            padding: 10px;
-        }
-
-        .end {
-            text-align: center;
-        }
-
-        @media (min-width: 600px) {
-            main {
-                display: grid;
-                grid-template-areas: 'pro we edu''pro osw edu';
-            }
-            .projects {
-                grid-area: pro;
-            }
-            .we {
-                grid-area: we;
-            }
-            .osw  {
-                grid-area: osw;
-            }
-            .edu  {
-                grid-area: edu;
-            }
-
-            .review {
-                display: grid;
-                grid-template-areas: 'a a a';
-                gap: 10px;
-            }
-            .review h2 {
-                grid-area: a;
-            }
-            nav{
-                flex-direction: row;
-                justify-content: space-between;
-            }
-            img {
-                display: inline;
-            }
-        }
-        
-    </style>
 </head>
-<body>
+<body class="inter-regular">
     <nav>
             <h3><img src="favicon.ico" alt="">My Web</h3>
             <ul>
+                <li><button onclick="mode()"><i class="fa-solid fa-moon" id="icon"></i></button></li>
                 <li>Home</li>
                 <li>Projects</li>
                 <li>Articles</li>
@@ -161,5 +85,8 @@
 
     </section>
     <p class="end">all right reserved 2025</p>
+
+    <script src="https://kit.fontawesome.com/53cbdfcf48.js" crossorigin="anonymous"></script>
 </body>
+<script src="script.js"></script>
 </html>
